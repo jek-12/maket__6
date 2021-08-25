@@ -1,0 +1,50 @@
+@media (max-width: 1199px) {
+  section {
+    .about_us {
+      .row {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        @include img_marg(3, 1px);
+      }
+      .about_card {
+        max-width: 320px;
+        margin: 0 auto;
+        &:nth-child(2n+1) {
+          margin-left: auto;
+        }
+      }
+      .top_row {
+        padding-top: 0;
+        padding-bottom: 123px;
+        @include about_us_nth2_4(auto, 100px, -1px, 0.49px, 0, 0.3px);
+      }
+      .bot_row {
+        @include about_us_nth2_4(auto, 100px, -1px, 0.45px, 0, 0.2px);
+      }
+      .face {
+        justify-content: center;
+        display: flex;
+      }
+    }
+  }
+}
+@media (max-width: 615px) {
+  section {
+    .about_us {
+      .headline_1 {
+        padding-left: 0;
+        font-size: 30px;
+      }
+    }
+  }
+}
+@media (max-width: 499px) {
+  section {
+    .about_us {
+      .headline_1 {
+        font-size: 17px;
+      }
+    }
+  }
+}

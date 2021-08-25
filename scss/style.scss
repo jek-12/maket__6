@@ -1,0 +1,38 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/grid";
+
+@import "abstract/font";
+@import 'abstract/colors';
+@import "abstract/buttons";
+@import "abstract/mixins";
+
+@import "abstract/reset";
+
+@import "components/header & footer/header";
+@import "components/Media Queries/header & footer/header_query";
+
+@import "components/congratulation";
+@import "components/Media Queries/congratulation_query";
+
+@import "components/service";
+@import "components/Media Queries/service_query";
+
+@import "components/team";
+@import "components/Media Queries/team_query";
+
+@import "components/skills";
+@import "components/Media Queries/skills_query";
+
+@import "components/portfolio";
+@import "components/Media Queries/portfolio_query";
+
+@import "components/about_us";
+@import "components/Media Queries/about_us_query";
+
+@import "components/contact_form";
+@import "components/Media Queries/contact_form_query";
+
+@import "components/header & footer/footer";
+@import "components/Media Queries/header & footer/footer_query";

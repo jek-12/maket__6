@@ -1,0 +1,32 @@
+@media (max-width: 585px) {
+  footer {
+    .footer {
+      .bot {
+        .col-lg-1 {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  footer {
+    .footer {
+      .bot {
+        .col-lg-1 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  footer {
+    .footer {
+      padding-bottom: 6px;
+      .bot {
+        padding-top: 10px;
+      }
+    }
+  }
+}

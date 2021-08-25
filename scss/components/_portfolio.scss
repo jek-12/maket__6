@@ -1,0 +1,116 @@
+section {
+  .portfolio {
+    width: 100%;
+    background-color: $portfolio_bckg_c;
+    padding-bottom: 113px;
+    @include headline_1(39px, $portfolio_headline_c, 118px 0 23px 3px, 3.68px, 1px);
+    @include line(1, $portfolio_line_c);
+
+    .underline_text {
+
+      @include underline_text(17px, 18.2px, 0.2px, 0.5px, $portfolio_underline_c);
+
+      :last-child {
+        padding-left: 4px;
+        letter-spacing: 0.25px;
+      }
+    }
+    .buttons {
+      width: 398px;
+      margin: 41px auto 62px auto;
+      display: flex;
+      @include button_f_portfolio(84px);
+      #first_but_port {
+        @include but_f_port(11px);
+        padding: 0 1px 2px 0;
+        letter-spacing: 0.75px;
+      }
+      #sec_but_port {
+        @include but_f_port(5px);
+        letter-spacing: 0.45px;
+        padding-bottom: 2px;
+      }
+      :nth-child(3){
+        button {
+          width: 90px;
+          padding-left: 3px;
+          padding-bottom: 1px;
+          letter-spacing: 1.286px;
+          font-size: 17px;
+        }
+      }
+      :nth-child(4) {
+        button {
+          width: 90px;
+          padding-left: 0;
+          padding-bottom: 1px;
+          letter-spacing: 1px;
+          font-size: 17px;
+        }
+      }
+    }
+    .port_img {
+      max-width: 1120px;
+      margin: 0 auto;
+      .portfolio_card {
+        height: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span {
+          font-family: titilliumweb_regular, sans-serif;
+          font-size: 18px;
+          line-height: 19px;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+          color: $portfolio_underimg_text_c;
+        }
+      }
+      img {
+        @include size(541px,311px);
+      }
+    }
+    .top_row {
+      margin-bottom: 58px;
+      div{
+        &:first-child {
+          span {
+            @include text_portf_pos(-28px, 2px);
+          }
+        }
+        &:last-child {
+          .portfolio_card {
+            margin-top: 3px;
+            margin-left: 2px;
+            span {
+              @include text_portf_pos(-24px, -3px);
+            }
+          }
+        }
+      }
+    }
+    .bot_row {
+      div{
+        &:first-child {
+          .portfolio_card {
+            margin-left: 4px;
+          }
+          span {
+            @include text_portf_pos(-27px, -10px);
+          }
+        }
+        &:last-child {
+          .portfolio_card {
+            margin-top: 1px;
+            margin-left: 4px;
+            span {
+              @include text_portf_pos(-26px, 7px);
+            }
+          }
+        }
+      }
+    }
+    @include big_buttons(button , button, $portfolio_bckg_button_c, $portfolio_button_c, 78px, 0.3px, 8px, $portfolio_button_c, $portfolio_button_shadow_c, $portfolio_button_hover_shadow_c);
+  }
+}

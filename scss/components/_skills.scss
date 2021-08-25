@@ -1,0 +1,64 @@
+section {
+  .skills {
+    background-color: $skills_bckg_c;
+    width: 100%;
+    padding-bottom: 113px;
+
+     @include headline_1(38px, $skills_headline_c,  116px 0px 22px 7px, 4.35px,  -0.18px);
+      @include line(1, $skills_line_c);
+
+        .underline_text {
+
+          @include underline_text(17px, 18px, 0.35px, 0, $skills_underline_c);
+
+          :first-child {
+            word-spacing: 0.2px;
+          }
+          :last-child {
+            padding-left: 5px;
+            letter-spacing: 0.42px;
+          }
+        }
+    .circles {
+      width: 200px;
+      height: 220px;
+      text-align: center;
+      span {
+        position: relative;
+        top: 27px;
+        font-family: titilliumweb_semibold, sans-serif;
+        font-size: 24px;
+        line-height: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $skills_undercircle_text_c;
+      }
+    }
+    .circle_l {
+      left: -1px;
+    }
+    .circle {
+      position: relative;
+      top: 1px;
+      span {
+        font-size: 29px;
+        left: 2px;
+        top: 0;
+      }
+    }
+    .circle strong {
+      color: $skills_circle_text_c;
+      font-family: titilliumweb_light, sans-serif;
+      position: absolute;
+      top: 42px;
+      left: 66px;
+      font-weight: 100;
+      font-size: 51px;
+    }
+    .skills-slider {
+      max-width: 1040px;
+      padding: 82px 0 0 0;
+    }
+    @include pagination(2);
+  }
+}

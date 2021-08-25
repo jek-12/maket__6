@@ -1,0 +1,9 @@
+@import "mixins";
+@include font-face(titilliumweb_extralight, "../font/titilliumweb-extralight-webfont");
+@include font-face(titilliumweb_semibold, "../font/titilliumweb-semibolditalic-webfont");
+@include font-face(titilliumweb_light, "../font/titilliumweb-light-webfont");
+@include font-face(titilliumweb_lightitalic, "../font/titilliumweb-lightitalic-webfont");
+@include font-face(titilliumweb_regular, "../font/titilliumweb-regular-webfont");
+@include font-face(titilliumweb_semibold, "../font/titilliumweb-semibold-webfont");
+@include font-face(titilliumweb_bold, "../font/titilliumweb-bold-webfont", 700);
+@include font-face(titilliumweb_italic, "../font/titilliumweb-italic-webfont");

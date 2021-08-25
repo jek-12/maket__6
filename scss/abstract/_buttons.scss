@@ -1,0 +1,41 @@
+@mixin big_buttons ($class, $type, $bckg_color_b, $color_b, $class_pad_top, $l_spacing, $text_pad_l, $hover_but_color, $shadow_color, $hover_shadow_color) {
+  .#{$class} {
+    padding-top: $class_pad_top;
+    #{$type} {
+      display: block;
+      margin: 0 auto;
+      transition: .8s;
+      padding-left: $text_pad_l;
+      padding-top: 3px;
+      text-transform: uppercase;
+      font-family: titilliumweb_semibold, sans-serif;
+      text-align: center;
+      border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      letter-spacing: $l_spacing;
+      width: 293px;
+      height: 66px;
+      background-color: $bckg_color_b;
+      color: $color_b;
+      box-shadow: 0 4px $shadow_color;
+    }
+    #{$type}:hover {
+      color: rgba($hover_but_color, 0.8);
+      font-size: 20px;
+      box-shadow: 0 0 15px rgba($hover_shadow_color, 0.7);
+    }
+    #{$type}:active {
+      font-size: 14px;
+    }
+  }
+@media (max-width: 760px){
+  .#{$class} {
+    #{$type} {
+      font-size: 16px;
+      width: 233px;
+      height: 55px;
+      }
+    }
+  }
+}

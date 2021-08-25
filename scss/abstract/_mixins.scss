@@ -1,0 +1,243 @@
+@mixin font-face ($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+
+          svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+          otf: "opentype",
+          ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+@mixin pagination ($num){
+  .swiper-pagination-#{$num} {
+    display: none;
+    position: relative;
+    width: 130px;
+    height: 15px;
+    left: 20px;
+    margin: 50px auto 0 auto;
+  }
+  .swiper-pagination-bullet {
+    @include size(12px, 12px);
+    margin: 0 10px;
+  }
+  .swiper-pagination-bullet-active {
+    background: #0578b4;
+  }
+}
+@mixin headline_1 ($f_size, $color, $pad, $l_space, $w_space) {
+  .headline_1 {
+    font-family: titilliumweb_semibold, sans-serif;
+    font-size: $f_size;
+    line-height: 29px;
+    font-weight: 700;
+    color: $color;
+    margin: 0 auto;
+    padding: $pad;
+    width: max-content;
+    font-kerning: none;
+    letter-spacing: $l_space;
+    word-spacing: $w_space;
+  }
+}
+@mixin line($opacity, $bckg) {
+  .line {
+    width: 87px;
+    height: 4px;
+    opacity: $opacity;//0.14;
+    background-color: $bckg;//#000000;
+    margin: 0 auto;
+
+  }
+}
+@mixin underline_text ($pad_t, $f_size, $l_space, $w_space, $color) {
+  text-align: center;
+  font-family: titilliumweb_regular, sans-serif;
+  font-size: $f_size;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: $l_space;
+  word-spacing: $w_space;
+  color: $color;
+  padding-top: $pad_t;
+}
+@mixin size ($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin service_cards ($num, $img_w, $img_h, $pad_left, $pad_right, $marg_t, $marg_b, $margin_l_text,  $marg_b_t, $color) {
+  .swiper-slide {
+    &:nth-child(4n+#{$num}) {
+        img {
+          width: $img_w;
+          height: $img_h;
+          padding-left: $pad_left;
+          padding-right: $pad_right;
+          margin-top: $marg_t;
+          box-sizing: content-box;
+        }
+        span:nth-child(2) {
+          font-size: 24px;
+          line-height: 18px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0;
+          color: $color;
+          margin-bottom: $marg_b;
+          margin-left: $margin_l_text;
+        }
+        span:nth-child(3) {
+          margin-bottom: $marg_b_t;
+        }
+        span:nth-child(4) {
+          color: $team_cards_t_3_c;
+        }
+      }
+  }
+}
+@mixin team ($num, $color, $num_1, $padding_1, $num_2, $padding_2, $left_pos, $top_pos, $right_pos, $marg_r) {
+  .swiper-slide {
+    &:nth-child(4n+#{$num}) {
+      :nth-child(1) {
+        span:nth-child(2) {
+          font-family: titilliumweb_semibold, sans-serif;
+          font-weight: 400;
+          position: relative;
+          bottom: -15px;
+          right: $right_pos;
+          font-kerning: none;
+          letter-spacing: 0.41px;
+        }
+        span:nth-child(3) {
+          color: $color;
+          letter-spacing: 0.62px;
+          margin-right: $marg_r;
+        }
+        span:nth-child(4) {
+          position: relative;
+          top: $top_pos;
+          line-height: 24px;
+          font-size: 15px;
+          letter-spacing: 0.67px;
+          left: $left_pos;
+        }
+      }
+      &:nth-child(2n+#{$num_1}) {
+        div:nth-child(5) {
+          padding: $padding_1;
+          #icon_marg {
+            margin-left: 1px;
+          }
+        }
+      }
+      &:nth-child(2n+#{$num_2}) {
+        div:nth-child(5) {
+          padding: $padding_2;
+          #icon_marg {
+            margin-left: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+@mixin button_f_portfolio ($width) {
+  form {
+    padding: 0;
+  }
+  button {
+    transition: .8s;
+    width: $width;
+    height: 38px;
+    background-color: rgba(0,0,0,0.07);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-family: titilliumweb_semibold, sans-serif;
+    padding: 0 0 0 5px;
+    font-size: 18px;
+    letter-spacing: 1.636px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #393939;
+  }
+  button:hover {
+    font-size: 20px;
+    background-color: white;
+  }
+  button:active {
+    font-size: 15px
+  }
+}
+@mixin but_f_port ($left) {
+  position: relative;
+  left: $left;
+}
+@mixin text_portf_pos ($bot, $left) {
+  position: relative;
+  bottom: $bot;
+  left: $left;
+}
+
+@mixin about_us_nth2_4 ($marg_l, $pad_bot, $w_space_1 ,$l_space_1, $w_space_2, $l_space_2) {
+  div:nth-child(2) {
+    padding-bottom: $pad_bot;
+    .about_card {
+      :nth-child(1) {
+        word-spacing: $w_space_1;
+        letter-spacing: $l_space_1;
+      }
+    }
+  }
+  div:nth-child(4) {
+    .about_card {
+      width: 390px;
+      margin-left: $marg_l;
+      padding-top: 3px;
+      :nth-child(1) {
+        word-spacing: $w_space_2;
+        letter-spacing: $l_space_2;
+      }
+    }
+  }
+}
+@mixin img_marg ($nth, $marg_l) {
+  div:nth-child(#{$nth}) {
+    img {
+      margin-left: $marg_l;
+    }
+  }
+}
+@mixin about_us_text_par ($f_fam, $f_size, $l_height, $color) {
+  font-family: $f_fam, sans-serif;
+  font-size: $f_size;
+  line-height: $l_height;
+  color: $color;
+}
+@mixin form_req_disp ($type){
+  .placeinput #{$type}:invalid + .place_holder {
+    display: inline;
+  }
+}
+@mixin footer_correct($nth, $pad_l, $l_space) {
+  &:nth-child(#{$nth}) {
+    padding-left: $pad_l;
+    letter-spacing: $l_space;
+  }
+}

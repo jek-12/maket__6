@@ -1,0 +1,59 @@
+@media (max-width: 1199px) {
+  section {
+    .portfolio {
+      .top_row {
+        margin-bottom: 0;
+      }
+      .col-sm-12 {
+        padding-bottom: 45px;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  section {
+    .portfolio {
+      padding-bottom: 43px;
+      .headline_1 {
+        font-size: 38px;
+      }
+      .col-sm-12 {
+        padding-bottom: 0;
+      }
+      .button {
+        padding-top: 0;
+      }
+      .buttons {
+        width: 238px;
+        height: 100px;
+        :nth-child(3){
+          button {
+            margin-left: 9px;
+          }
+        }
+        :nth-child(4) {
+          button {
+            margin-left: 3px;
+          }
+        }
+      }
+      .port_img {
+        img {
+          @include size(315px,181px);
+        }
+        .portfolio_card {
+          height: 290px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 499px) {
+  section {
+    .portfolio {
+      .headline_1 {
+        font-size: 19px;
+      }
+    }
+  }
+}

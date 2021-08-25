@@ -1,0 +1,59 @@
+section {
+  .about_us {
+    background-color: $about_us_bckg_c;
+    padding-bottom: 139px;
+    @include headline_1(39px, $about_us_headline_c, 117px 0 23px 5px, 3.4px, 1px);
+    @include line(0.14, $about_us_line_c);
+    .underline_text {
+      @include underline_text(17px, 18.2px, 0.25px, 0.5px, $about_us_underline_c);
+      padding-bottom: 66px;
+      }
+    .about_card {
+      @include size(360px, 160px);
+      display: flex;
+      flex-direction: column;
+      &:nth-child(2n+1) {
+        margin-left: 53px;
+        padding-top: 3px;
+      }
+    }
+    img {
+      @include size(96px,96px);
+      border-radius: 100%;
+    }
+    .row {
+      max-width: 1100px;
+      margin: 0 auto;
+      span:nth-child(1) {
+        @include  about_us_text_par(titilliumweb_light, 21px, 31px, $about_us_text_par_1);
+        font-style: italic;
+      }
+      span:nth-child(2) {
+        @include  about_us_text_par(titilliumweb_semibold, 24px, 26px, $about_us_text_par_2);
+        text-transform: uppercase;
+        letter-spacing: 0.002em;
+        font-weight: 700;
+        padding-top: 22px;
+      }
+      span:nth-child(3) {
+        @include  about_us_text_par(titilliumweb_regular, 18px, 27px, $about_us_text_par_3);
+        letter-spacing: 0.02em;
+        padding-left: 1px;
+      }
+      @include img_marg(1, 1px);
+      @include img_marg(3, 39px);
+    }
+    .top_row {
+      padding-bottom: 153px;
+      @include about_us_nth2_4(90px, 0, -1px, 0.49px, 0, 0.3px);
+    }
+    .bot_row {
+      @include about_us_nth2_4(89px, 0, -1px, 0.45px, 0, 0.2px);
+      @include img_marg(3, 40px);
+      span:nth-child(2) {
+        letter-spacing: 0.27px;
+        padding-top: 23px;
+      }
+    }
+  }
+}

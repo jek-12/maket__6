@@ -1,0 +1,45 @@
+section {
+  .team {
+    width: 100%;
+    background-color: $team_bckg_c;
+    padding-bottom: 127px;
+
+    @include headline_1(39px, $team_headline_c, 118px 0 24px 3px, 3.5px, 1px);
+    @include line(0.74, $team_line_c);
+    .underline_text {
+      @include underline_text(19px, 18.2px, 0.2px, 0.5px, $team_underline_c);
+    }
+    .team_slider {
+      max-width: 1040px;
+      padding: 77px 0 0 0;
+    }
+    .team_cards {
+      img {
+        border-radius: 100%;
+      }
+      @extend %cards_props;
+      height: 490px;
+      width: 205px;
+      align-items: unset;
+      .contact_links {
+        display: flex;
+        justify-content: space-between;
+        a {
+          @include size(32px,32px);
+          img {
+            @include size(32px,32px);
+          }
+        }
+      }
+    }
+    @for $i from 1 to 5 {
+      $size: $i * (200/$i);
+      @include service_cards(#{$i},#{$size}px,#{$size}px, 0, 0, 0, 0, 0, 0, $team_cards_t_1_c);
+    }
+    @include team(1, $team_cards_t_2_c, 0, 0 45px 0 40px, 1, 0 23px 0 19px, -3px, -5px, 2px, 2px);
+    @include team(2, $team_cards_t_2_c, 0, 0 45px 0 40px, 1, 0 23px 0 19px, -2px, -3px, 2px, 6px);
+    @include team(3, $team_cards_t_2_c, 0, 0 45px 0 40px, 1, 0 23px 0 19px, -2px, -3px, 3px, 5px);
+    @include team(4, $team_cards_t_2_c, 0, 0 45px 0 40px, 1, 0 23px 0 19px, 2px, -3px, -3px, -5px);
+    @include pagination(1);
+  }
+}

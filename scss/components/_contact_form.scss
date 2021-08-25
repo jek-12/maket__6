@@ -1,0 +1,101 @@
+section {
+  %req {
+    @include about_us_text_par(Arial, 16px, 0, #ff4444);
+    z-index: 10;
+  }
+  .contact_form {
+    padding-bottom: 119px;
+    background-color: $contact_form_bckg_c;
+
+    @include headline_1(39px, $contact_form_headline_c, 118px 0 23px 5px, 3.82px, 0);
+    @include line(1, $contact_form_line_c);
+
+    .underline_text {
+
+      @include underline_text(17px, 18px, 0.36px, 0, $contact_form_underline_c);
+      :first-child {
+        word-spacing: 0.5px;
+        padding-left: 3px;
+      }
+    }
+    form {
+      margin-top: 75px;
+    }
+    .place_holder {
+      z-index: 100;
+      cursor: text;
+      position: absolute;
+      display: none;
+      color: lightgrey;
+    }
+    @include form_req_disp(input);
+    @include form_req_disp(textarea);
+    .placeinput {
+      position: relative;
+    }
+    .place_holder span {
+      color: red;
+    }
+    .top_form {
+      max-width: 860px;
+      margin: 0 auto;
+      .form {
+        &:nth-child(1) {
+          span {
+            @extend %req;
+            left: 111px;
+            top: 8px;
+          }
+        }
+        &:nth-child(2) {
+          span {
+            @extend %req;
+            left: 124px;
+            top: 8px;
+          }
+        }
+        input {
+          position: relative;
+          width: 414px;
+          height: 56px;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+          padding: 0 25px;
+          @include about_us_text_par(titilliumweb_regular, 18px, 18px, $contact_form_placehold);
+          background-color: $contact_form_input;
+        }
+        #second {
+          margin-left: 16px;
+        }
+      }
+    }
+    .bot_form {
+      width: 860px;
+      height: 200px;
+      margin: 27px auto 0 auto;
+      :nth-child(2) {
+        @extend %req;
+          left: 133px;
+          top: 30px;
+      }
+    }
+    #third {
+      width: 860px;
+      height: 200px;
+      margin: 0 auto;
+      background-color: $contact_form_input;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      resize: none;
+      position: relative;
+      padding: 21px 25px 0 25px;
+      @include about_us_text_par(titilliumweb_regular, 18px, 18px, $contact_form_placehold);
+    }
+    @include big_buttons(button , button, $contact_form_bckg_button_c, $contact_form_button_c, 0, 0, 6px, $contact_form_button_c, $contact_form_button_shadow_c, $contact_form_button_hover_shadow_c);
+    .button {
+      margin-top: -16px;
+    }
+  }
+}

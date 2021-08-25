@@ -1,0 +1,23 @@
+section {
+  .congratulation {
+    background-color: $congratulation_bckg_c;
+    padding-top: 128px;
+    padding-bottom: 149px;
+    .congratulatory_text {
+      padding: 0 10px 0;
+      font-kerning: none;
+      text-align: center;
+      font-family: titilliumweb_bold, sans-serif;
+      color: $header_congratulatory_text_c;
+      font-style: normal;
+      letter-spacing: 0;
+      line-height: 49px;
+      font-size: 42.2px;
+      :first-child {
+        margin-right: 5px;
+      }
+    }
+    @include big_buttons(header_button, input, $header_bckg_button_c, $header_button_c, 55px, 0.434px, 7px, $header_button_c, $congratulation_button_shadow_c, $congratulation_button_hover_shadow_c);
+  }
+}
+

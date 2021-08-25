@@ -1,0 +1,45 @@
+@media (max-width: 1099px) {
+  section {
+    .service_section {
+      .swiper-pagination-0 {
+        display: block;
+      }
+      .service_slider {
+        max-width: 700px;
+      }
+      @include service_cards(4, 120px, 124px, 11px, 0, 0, -39px, -1px, 4px, $service_cards_c);
+      @include service_cards(1, 90px, 131px, 10px, 0, -5px, -38px, -1px, 4px, $service_cards_c);
+      @include service_cards(2, 159px, 126px, 0, 10px, 0, -38px, -3px, 4px, $service_cards_c);
+      @include service_cards(3, 95px, 134px, 0, 6px, -4px, -33px, -3px, 4px, $service_cards_c);
+    }
+  }
+}
+@media (max-width: 739px) {
+  section {
+    .service_section {
+      .service_slider {
+        max-width: 440px;
+      }
+      @include service_cards(3, 120px, 124px, 11px, 0, 0, -39px, -1px, 4px, $service_cards_c);
+      @include service_cards(4, 90px, 131px, 10px, 0, -5px, -38px, -1px, 4px, $service_cards_c);
+      @include service_cards(1, 159px, 126px, 0, 10px, 0, -38px, -3px, 4px, $service_cards_c);
+      @include service_cards(2, 95px, 134px, 0, 6px, -4px, -33px, -3px, 4px, $service_cards_c);
+    }
+  }
+}
+@media (max-width: 499px) {
+  section {
+    .service_section {
+      .headline_1 {
+        font-size: 17px;
+      }
+      .service_slider {
+        max-width: 200px;
+      }
+      @include service_cards(2, 120px, 124px, 11px, 0, 0, -39px, -1px, 4px, $service_cards_c);
+      @include service_cards(3, 90px, 131px, 10px, 0, -5px, -38px, -1px, 4px, $service_cards_c);
+      @include service_cards(4, 159px, 126px, 0, 10px, 0, -38px, -3px, 4px, $service_cards_c);
+      @include service_cards(1, 95px, 134px, 0, 6px, -4px, -33px, -3px, 4px, $service_cards_c);
+    }
+  }
+}

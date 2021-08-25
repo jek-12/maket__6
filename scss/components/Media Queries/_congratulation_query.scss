@@ -1,0 +1,17 @@
+@media (max-width: 933px) {
+  section {
+    .congratulation {
+      padding-top: 27px;
+      padding-bottom: 60px;
+    }
+  }
+}
+@media (max-width: 760px){
+  section {
+    .congratulation {
+      .congratulatory_text {
+        font-size: 35px;
+      }
+    }
+  }
+}

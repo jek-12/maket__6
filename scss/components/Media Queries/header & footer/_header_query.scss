@@ -1,0 +1,41 @@
+@media (max-width: 760px) {
+  header {
+    .for_shadow_all {
+      padding: 3px 41px 0 0;
+    }
+    .for_shadow {
+      margin-left: 0;
+      :last-child {
+        margin-right: 0;
+        padding-right: 60px;
+      }
+    }
+    .disappearing_header {
+      padding-top: 30px;
+    }
+    .main_header {
+      padding: 0 21px 0 21px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  header {
+    .main_header {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      .nav_bar {
+        padding: 29.8px 11px 0 10.5px;
+      }
+      .for_shadow_all {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 3px 0;
+      }
+      .logo {
+        margin-left: 35%;
+        margin-top: -20px;
+      }
+    }
+  }
+}

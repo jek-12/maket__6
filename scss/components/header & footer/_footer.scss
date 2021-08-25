@@ -1,0 +1,34 @@
+footer {
+  .footer {
+    background-color: $footer_bckg_c;
+    padding-bottom: 36px;
+    .bot {
+      max-width: 945px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding-top: 36px;
+      .col-lg-1 {
+        @include about_us_text_par(titilliumweb_regular, 24px, 40px, $footer_text_c);
+        letter-spacing: 0.2px;
+        font-weight: 600;
+        @include footer_correct(1, 1px, 0.2px);
+        @include footer_correct(2, 13px, 0.2px);
+        @include footer_correct(3, 0, 0.43px);
+        @include footer_correct(6, 0, 0.42px);
+        &:nth-child(2) {
+          a {
+            color: $footer_hover_c;
+          }
+        }
+      }
+      a:active, a:visited {
+        color: $footer_text_c;
+      }
+      a:hover {
+        color: $footer_hover_c;
+      }
+    }
+  }
+}

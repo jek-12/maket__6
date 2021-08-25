@@ -1,0 +1,57 @@
+@media (max-width: 1099px) {
+  section {
+    .team {
+      .swiper-pagination-1 {
+        display: block;
+      }
+      .team_slider {
+        max-width: 700px;
+      }
+      @include team(4, $team_cards_t_2_c, 0, 0 23px 0 19px, 1, 0 45px 0 40px, -3px, -5px, 2px, 2px);
+      @include team(1, $team_cards_t_2_c, 0, 0 23px 0 19px, 1, 0 45px 0 40px, -2px, -3px, 2px, 6px);
+      @include team(2, $team_cards_t_2_c, 0, 0 23px 0 19px, 1, 0 45px 0 40px, -2px, -3px, 3px, 5px);
+      @include team(3, $team_cards_t_2_c, 0, 0 23px 0 19px, 1, 0 45px 0 40px, 2px, -3px, -3px, -5px);
+    }
+  }
+}
+@media (max-width: 739px) {
+  section {
+    .team {
+      .headline_1 {
+        font-size: 31px;
+      }
+      .team_slider {
+        max-width: 440px;
+      }
+      @include team(3, $team_cards_t_2_c, 0, 0 45px 0 40px, 1, 0 23px 0 19px, -3px, -5px, 2px, 2px);
+      @include team(4, $team_cards_t_2_c, 0, 0 45px 0 40px, 1, 0 23px 0 19px, -2px, -3px, 2px, 6px);
+      @include team(1, $team_cards_t_2_c, 0, 0 45px 0 40px, 1, 0 23px 0 19px, -2px, -3px, 3px, 5px);
+      @include team(2, $team_cards_t_2_c, 0, 0 45px 0 40px, 1, 0 23px 0 19px, 2px, -3px, -3px, -5px);
+    }
+  }
+}
+@media (max-width: 499px) {
+  section {
+    .team {
+      .headline_1 {
+        font-size: 17px;
+      }
+      .team_slider {
+        max-width: 200px;
+      }
+      @include team(2, $team_cards_t_2_c, 0, 0 23px 0 19px, 1, 0 45px 0 40px, -3px, -5px, 2px, 2px);
+      @include team(3, $team_cards_t_2_c, 0, 0 23px 0 19px, 1, 0 45px 0 40px, -2px, -3px, 2px, 6px);
+      @include team(4, $team_cards_t_2_c, 0, 0 23px 0 19px, 1, 0 45px 0 40px, -2px, -3px, 3px, 5px);
+      @include team(1, $team_cards_t_2_c, 0, 0 23px 0 19px, 1, 0 45px 0 40px, 2px, -3px, -3px, -5px);
+    }
+  }
+}
+@media (max-width: 360px) {
+  section {
+    .team {
+      .headline_1 {
+        font-size: 17px;
+      }
+    }
+  }
+}
